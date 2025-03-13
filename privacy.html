@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" sizes="16x16" href="./imgs/icons8-test-tube-48.png" />
+    <link rel="icon" sizes="32x32" href="./imgs/icons8-test-tube-48.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate"> <!--Required for google translate API-->
+    <title>About - AuthentiScan</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+          <a href="index.html" class="logo">
+            <img src="./imgs/icons8-test-tube-48.png" alt="Plagiarism Test Software Logo">
+            <span>AuthentiScan</span> </a>
+        </div>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+        </ul>
+    </div>
+    
+    
+    <!-- Main Content Area -->
+    <div class="content">
+        <header>
+            <!-- Button to Toggle Sidebar -->
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+            <button id="mode-toggle" title="Toggle Dark/Light Mode">Toggle Mode</button>
+        </header>
+
+        <!--Google Translate API insertion-->
+        <br>
+        <div id="google_translate_element">
+
+        </div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+            'google_translate_element'
+        );
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+
+</script>
+
+  <!-- Main Content: Privacy Policy -->
+  <section class="page-content">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>
+        Your privacy is very important to us. This privacy policy explains how AuthentiScan collects, uses, and safeguards your personal information.
+      </p>
+      <h2>1. Information Collection</h2>
+      <p>
+        We collect information that you voluntarily provide to us when you create an account, such as your name and email address.
+      </p>
+      <h2>2. Use of Information</h2>
+      <p>
+        The information collected is used to operate and improve our services, process transactions, and send periodic emails.
+      </p>
+      <h2>3. Information Sharing</h2>
+      <p>
+        We do not sell, trade, or otherwise transfer your personal information to outside parties without your consent, except as required by law.
+      </p>
+      <h2>4. Security</h2>
+      <p>
+        We implement a variety of security measures to maintain the safety of your personal information. However, no method of transmission over the internet is 100% secure.
+      </p>
+      <!-- Additional sections can be added here -->
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Back to Top">↑</button>
+
+   <!-- Footer Section -->
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html"><img src="./imgs/icons8-test-tube-48.png" alt="Logo" /></a>
+    </div>
+    
+    <div class="footer-links">
+      <a href="./about.html">About Us</a>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./terms.html">Terms of Service</a>
+    </div> 
+    <br>
+    <div class="footer-copy">
+      <p>&copy; 2025 AuthentiScan. All rights reserved.</p>
+    </div>
+    
+    <div class="social-icons">
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+    <script>
+      const toggleBtn = document.getElementById('mode-toggle');
+      toggleBtn.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+          toggleBtn.innerHTML = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+      });
+
+      function toggleSidebar() {
+          const sidebar = document.getElementById('sidebar');
+          sidebar.classList.toggle('active');
+      }
+  </script>
+</body>
+</html>
